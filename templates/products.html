@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Product</th>
+    <th>Style</th>
+    <th>StyleCode</th>
+    <th>SKU</th>
+  </tr>
+
+    {% for product in context %}
+  <tr>
+    <td>{{ product.product }}</td>
+    <td>{{ product.style }}</td>
+    <td>{{ product.stylecode }}</td>
+    <td>{{ product.sku }}</td>
+        </tr>
+    {% endfor %}
+
+</body>
+</html>
